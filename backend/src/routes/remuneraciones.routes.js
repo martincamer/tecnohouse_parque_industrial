@@ -26,7 +26,7 @@ router.post(
 
 router.get("/remuneraciones/:id", isAuth, isAdmin, getRemuneracion);
 
-router.post("/remuneraciones", isAuth, isAdmin, crearRemuneracion);
+router.post("/crear-remuneracion", isAuth, isAdmin, crearRemuneracion);
 
 router.put("/remuneraciones/:id", isAuth, isAdmin, actualizarRemuneracion);
 

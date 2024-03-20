@@ -23,15 +23,15 @@ export const getRemuneracion = async (req, res) => {
 export const crearRemuneracion = async (req, res, next) => {
   const {
     armador,
-    fecha_entrega,
     fecha_carga,
+    fecha_entrega,
     km_lineal,
     pago_fletero_espera,
     viaticos,
     refuerzo,
     recaudacion,
-    datos_cliente,
     chofer,
+    datos_cliente,
   } = req.body;
 
   const { username, userRole } = req;
@@ -43,15 +43,15 @@ export const crearRemuneracion = async (req, res, next) => {
       "INSERT INTO remuneracion (armador, fecha_carga, fecha_entrega, km_lineal, pago_fletero_espera, viaticos, refuerzo, recaudacion,chofer, datos_cliente, usuario, role_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING *",
       [
         armador,
-        fecha_entrega,
         fecha_carga,
+        fecha_entrega,
         km_lineal,
         pago_fletero_espera,
         viaticos,
         refuerzo,
         recaudacion,
-        datosClienteJSON,
         chofer,
+        datosClienteJSON,
         username,
         userRole,
       ]
